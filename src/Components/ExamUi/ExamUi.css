@@ -1,0 +1,139 @@
+
+.loading-test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+.exam-layout{
+    margin: 0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(334deg, #fbfbfcfc, #ffffff, #9ba1fb);/* Replace with your desired color */
+	background-size: 180% 180%;
+	animation: exam-layout-animation 6s ease-in infinite;
+}
+@keyframes exam-layout-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.exam-inner-layout{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+}
+.question-info-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5% 0 5%;
+}
+.time-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+.question-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(334deg, #22222bfc, #4c709c, #373b6e);
+    color: white;
+    margin: 0 5% 0 5%;
+    min-height: 100px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.progress{
+    margin: 0 5% 2% 5%;
+}
+.options-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5% 5% 2% 5%;
+}
+h5{
+    margin: 0 !important;
+}
+.options{  
+    border: 2px solid rgb(118, 117, 117);
+    border-radius: 8px;
+    min-height: 50px;
+    margin-bottom: 2%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+.options:hover{
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-color: black;
+    transform: scale(1.03); 
+}
+.optionSequence{
+    background-color: #0d6efd;
+    border-radius: 50%; /* Adjusted to make it a perfect circle */
+    width: 30px;
+    height: 30px; /* Set height equal to width */
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1%;
+    font-size: 15px;
+   
+}
+.options:hover .optionSequence {
+    background-color: #061423; /* Change to your desired hover color */
+}
+.control-buttons{
+    margin: 0 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.selected {
+    background-color: rgba(57, 246, 57, 0.574); /* Change this to the desired styling effect */
+    /* Add any other styling you want for the selected option */
+  }
+
+  .exam-ends{
+    display: none;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px){
+   .question-text{
+       font-size: 16px;
+   }
+   .question-info-container h5{
+    font-size: 18px;
+   }
+   .time-container > .time{
+    font-size: 15px;
+   }
+  
+   .options-container > li {
+           font-size: 14px;
+   }
+    
+}

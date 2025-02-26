@@ -1,0 +1,123 @@
+.parentHome{
+    background:linear-gradient(334deg, #fbfbfcfc, #ffffff, #9ba1fb);/* Replace with your desired color */
+
+	background-size: 180% 180%;
+	animation: parentHome-animation 6s ease-in infinite;
+
+}
+.homesection{
+     
+     height: 645px;
+     max-width: 1400px;
+     margin: 0 auto;
+     display: flex;
+     flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+        
+}
+@keyframes parentHome-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.left-container{
+    width: 620px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.HomeHeading{
+    font-size: 3.5rem;
+    font-family: "Oswald", serif;
+    letter-spacing: 2px;
+    margin-top: 1%;
+    list-style-type: none;
+    line-height: 1.5;
+    font-weight: bold;
+   text-transform: uppercase;
+}
+.right-container{
+   width: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+
+}
+#homeimg{
+    margin-top: 6%;
+    width: 100%;
+}
+.home-button{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+
+}
+@media screen and ( max-width: 1120px){
+    .homesection{
+        flex-direction: column-reverse;
+        justify-content: space-evenly; 
+        height: 100%;
+        
+    }
+    .home-button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+   .left-container{
+    width: 100%;
+   }
+   .right-container
+    {
+         width: 100%;
+    }
+    #homeimg{
+        margin: 0 5% 0 5%;
+        width: 36rem;
+    }
+    .HomeHeading{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 780px){
+    #homeimg{
+        margin: 0 5% 0 5%;
+        width: 30rem;
+    }
+    .HomeHeading{
+        font-size: 2rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 485px){
+    #homeimg{
+        margin: 0 5% 0 5%;
+        width: 19rem;
+    }
+    .HomeHeading{
+        font-size: 1.8rem;
+        
+    }
+    .header-content{
+        padding-top: 4%;
+        padding-bottom: 2%;
+    }
+    .home-button{
+        justify-content: start;
+        padding-left: 4%;
+    }
+}
+
