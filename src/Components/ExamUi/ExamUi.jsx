@@ -29,9 +29,7 @@ const ExamUi = () => {
   // generating ai content
 
   const generateContent = async () => {
-    const genAI = new GoogleGenerativeAI(
-      "AIzaSyBDcztJCBdi3TOHjCO70mAswhXdVIDp6xE"
-    );
+    const genAI = new GoogleGenerativeAI("");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt =
